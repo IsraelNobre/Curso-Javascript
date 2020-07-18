@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+
+<body>
+    <h1>Sistema de Nacionalidade Brasileiro</h1>
+    <h2>De onde você é ?</h2>
+
+    <input type="text" name="nasc1" id="nasc1">
+    <input type="button" value="Verificar" onclick="pais()">
+    
+   <div id="nasc">
+
+   </div>
+    
+   <script>
+      function pais () {
+       var tx = window.document.querySelector('input#nasc1')
+       var nasc = window.document.querySelector('div#nasc')
+       var onde = String(tx.value)
+        if (onde =='brasil') {
+       nasc.innerHTML += `Você mora no ${onde}, então você é brasileiro`}
+       else {nasc.innerHTML += ` você é estrangeiro`}
+      }
+
+    </script>
+    
+
+</body>
+
+
+</html>
