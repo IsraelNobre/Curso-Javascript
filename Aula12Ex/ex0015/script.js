@@ -44,7 +44,7 @@ function  verificar() {
       }
       res.style.textAlign = 'center'
       res.innerHTML = `Dectetamos ${gênero} com ${idade} anos.`
-      res.appendChild(img)
+      res.appendChild(img) // precisa inseir este comando para aparecer a foto. 
      
     }
 
