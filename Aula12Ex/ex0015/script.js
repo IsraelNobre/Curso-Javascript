@@ -1,19 +1,12 @@
-function carregar() {
-var msg = window.document.getElementById('msg')
-var img = window.document.getElementById('imagem')
-var data = new Date()
-var hora = data.getHours()
-var min = data.getMinutes()
-msg.innerHTML = `Agora são ${hora} horas e ${min} minutos`
- if (hora >= 0 && hora < 12){
-   // bom dia
-   img.src = 'manha.png'
-   document.body.style.background = '#aca581'
-} else if (hora >= 12 && hora < 18){
-  // boa tarde
-     img.src = 'tarde.png'
-     document.body.style.background = '#c17030'
-} else  { // boa noite
-    img.src = 'noite.png'
-    document.body.style.background = '#025d65'}
-}
+function verificar () {
+  var data = new Date()
+  var ano = data.getFullYear()
+  var fano = document.getElementById('txtano')
+  var res = document.querySelector('div#res')}
+  
+   if (fano.value.length == 0 || fano.value > ano) {
+     window.alert('
+       [ERRO] Verifique os dados e tente novamente!')
+   } else {
+     window.alert('Tudo OK ')
+   }
