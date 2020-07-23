@@ -1,17 +1,21 @@
-function contar() {
-  let nu = document.getElementById('txti')
-  let res = document.getElementById('res')
+function tabuada() {
+  let num = document.getElementById('txtn')
+  let tab = document.getElementById('seltab')
    
-  if (nu.value.length == 0 ){
-    res.innerHTML = 'Impossivel contar'
+  if (num.value.length == 0 ){
+    window.alert('Por favor, digite um número!')
+    
   } else {
-    let iner1 = Number(nu.value)
+    let n = Number(num.value) 
+    let c = 1
+    tab.innerHTML =('')
+    while (c <= 10) {
+      let item   = document.createElement('Option')
+      item.text = `${n} x ${c} = ${n*c}`
+      item.value = `tab${c}`
+      tab.appendChild(item)
+      c++
+    }
+  }
 
-   if (iner1 >= 0 && iner1 < 10){
-      iner1 *= 4      
-  } else{
-    res.innerHTML(' infomra numero')
-  }
-  }
-  
 }
